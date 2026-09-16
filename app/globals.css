@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --maroon-primary: #5A0E1A;
+  --maroon-rich: #6E1221;
+  --maroon-deep: #3A070F;
+  --gold-heritage: #D4AF37;
+  --gold-champagne: #E8D9B5;
+  --gold-light: #F4E8C1;
+  --ivory-silk: #F8F4ED;
+  --ivory-warm: #FAF7F2;
+  --charcoal-dark: #111111;
+  --charcoal-muted: #222222;
+  
+  --background: #F8F4ED;
+  --foreground: #111111;
+}
+
+@layer base {
+  * {
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+  
+  body {
+    background-color: #F8F4ED;
+    color: #111111;
+    overflow-x: clip;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel Decorative', Georgia, 'Times New Roman', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #3A070F;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8D9B5;
+}
+
+/* Regal Gold Gradient Utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E8D9B5 60%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E8D9B5 0%, #D4AF37 50%, #B8860B 100%);
+}
+
+.bg-maroon-gradient {
+  background: linear-gradient(180deg, #5A0E1A 0%, #3A070F 100%);
+}
+
+.bg-maroon-radial {
+  background: radial-gradient(circle at center, #6E1221 0%, #5A0E1A 60%, #2A040A 100%);
+}
+
+.border-gold-subtle {
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+/* Indian Traditional Motif Pattern Backgrounds */
+.bg-mandala-pattern {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-silk-texture {
+  background: radial-gradient(ellipse at top, rgba(110, 18, 33, 0.95), rgba(58, 7, 15, 0.98)),
+              url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><path d="M30 0 L60 30 L30 60 L0 30 Z" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="1"/></svg>');
+}
+
+/* Shimmer animation keyframes */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0) 0%, rgba(243, 229, 171, 0.6) 50%, rgba(212, 175, 55, 0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite linear;
+}
+
+/* Subtle Silk Wave Floating Animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
